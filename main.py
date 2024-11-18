@@ -66,4 +66,4 @@ interface = gr.Interface(fn=predict,
              )
 
 # Launching Gradio
-interface.launch(server_name="0.0.0.0", server_port=8080)
+interface.launch()
