@@ -31,6 +31,9 @@ COPY assets/flower_dataset_labels.txt $HOME/app/assets/flower_dataset_labels.txt
 # Because the model file is too large we download it separately and put in the correct location
 ADD https://nextcloud.dc.scilifelab.se/s/GSf2g5CAFxBPtMN/download $HOME/app/assets/flower_model_vgg19.pth
 
+# If your app allows users to upload files set a directory where Gradio can place temporary files
+ENV GRADIO_TEMP_DIR="/home/username/app/temp/"
+
 # Give access to appripriate files and folders to the created user
 RUN chown -R $USER:$USER $HOME \
     && rm -rf /var/lib/apt/lists/*
