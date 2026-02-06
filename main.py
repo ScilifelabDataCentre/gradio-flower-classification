@@ -6,7 +6,7 @@ from torchvision import transforms
 import torchvision.models as models
 
 # Load the trained model
-model = torch.load('assets/flower_model_vgg19.pth')
+model = torch.load('assets/flower_model_vgg19.pth', weights_only=False)
 model.eval()
 # Load labels
 with open('assets/flower_dataset_labels.txt', 'r') as f:
