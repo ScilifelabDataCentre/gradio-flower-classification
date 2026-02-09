@@ -54,7 +54,7 @@ ref = """
 interface = gr.Interface(fn=predict,
                          inputs=gr.Image(type="pil"),
                          outputs=gr.Label(num_top_classes=3),
-                         allow_flagging="never",
+                         flagging_mode="never",
                          title=title,
                          description=description, 
                          article=ref,
